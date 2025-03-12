@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inputs</title>
+    <link rel="stylesheet" href="/Principal/Style/input-style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulario de Inputs</h1>
+        <h2>Agregar Producto</h2>
+        <form id="productForm">
+            <label for="productName">Nombre del Producto:</label>
+            <input type="text" id="productName" placeholder="Ej. Leche Entera" required>
+
+            <label for="barcode">Código de Barras:</label>
+            <input type="text" id="barcode" placeholder="Ej. 123456789012" required>
+
+            <label for="expiryDate">Fecha de Caducidad:</label>
+            <input type="date" id="expiryDate" required>
+
+            <label for="supplier">Proveedor:</label>
+            <input type="text" id="supplier" placeholder="Ej. Distribuidora XYZ" required>
+
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+
+    <script src="/Principal/scripts/input-script.js"></script>
+</body>
+</html>
