@@ -50,6 +50,69 @@
             <section id="salidas" style="display: none;">
                 <h2>Salidas</h2>
                 <p>Contenido de Salidas.</p>
+                <div class="form-container">
+                    <h1>Registro de Salidas</h1>
+                    <form id="salidaForm">
+                        <label for="fechaHora">Fecha y Hora:</label>
+                        <input type="datetime-local" id="fechaHora" name="fechaHora" required>
+            
+                        <label for="cantidad">Cantidad de Salida:</label>
+                        <input type="number" id="cantidad" name="cantidad" required>
+            
+                        <label for="motivo">Motivo:</label>
+                        <input type="text" id="motivo" name="motivo" required>
+            
+                        <label for="tipoSalida">Tipo de Salida:</label>
+                        <select id="tipoSalida" name="tipoSalida" required>
+                            <option value="efectivo">Efectivo</option>
+                            <option value="electronico">Electrónico</option>
+                        </select>
+            
+                        <button type="submit">Registrar Salida</button>
+                    </form>
+                </div>
+            
+                <div class="content">
+                    <h2>Registros de Salidas</h2>
+                    <table id="tablaSalidas">
+                        <thead>
+                            <tr>
+                                <th>Fecha y Hora</th>
+                                <th>Cantidad</th>
+                                <th>Motivo</th>
+                                <th>Tipo de Salida</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los registros se agregarán aquí dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            
+                <script>
+                    document.getElementById('salidaForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Evita que el formulario se envíe
+            
+                        // Obtener los valores del formulario
+                        const fechaHora = document.getElementById('fechaHora').value;
+                        const cantidad = document.getElementById('cantidad').value;
+                        const motivo = document.getElementById('motivo').value;
+                        const tipoSalida = document.getElementById('tipoSalida').value;
+            
+                        // Crear una nueva fila para la tabla
+                        const tabla = document.getElementById('tablaSalidas').getElementsByTagName('tbody')[0];
+                        const nuevaFila = tabla.insertRow();
+            
+                        // Insertar celdas con los datos
+                        nuevaFila.insertCell(0).textContent = fechaHora;
+                        nuevaFila.insertCell(1).textContent = cantidad;
+                        nuevaFila.insertCell(2).textContent = motivo;
+                        nuevaFila.insertCell(3).textContent = tipoSalida;
+            
+                        // Limpiar el formulario
+                        document.getElementById('salidaForm').reset();
+                    });
+                </script>
             </section>
             <section id="facturacion" style="display: none;">
                 <h2>Facturación</h2>
