@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleados</title>
+    <link rel="stylesheet" href="../Style/perfiles.css"><!-- EnlazaR el archivo CSS-->
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Empleados</h1>
+        <form id="formulario-registro"> <!--id para manipularlo con JS-->
+            
+            <!--campo para el nombre-->
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+             <!--campo para el correo-->
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+             <!--campo para la contraseña-->
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+
+             <!--campo para seleccionar los roles de los empleados-->
+            <label for="rol">Rol:</label>
+            <select id="rol" name="rol" required>
+                <option value="gerente">Gerente</option>
+                <option value="cajero">Cajero</option>
+                <option value="almacen">Almacen</option>
+                <option value="repartidor">Repartidor</option>
+            </select>
+
+             <!--campo para la fecha de contratacion-->
+            <label for="fecha">Fecha de contratación:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <script src="../Script/scriptperfiles.js"></script>
+</body>
+</html>

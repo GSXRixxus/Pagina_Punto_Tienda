@@ -1,3 +1,4 @@
+/* Estilos generales para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +9,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Estilos para el encabezado */
 header {
     background-color: #333;
     color: #fff;
@@ -16,12 +18,14 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
     flex: 1;
     margin: 20px;
 }
 
+/* Estilos para la barra lateral */
 .sidebar {
     width: 200px;
     background-color: #444;
@@ -30,15 +34,18 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Lista de la barra lateral */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Elementos de la lista de la barra lateral */
 .sidebar ul li {
     margin: 15px 0;
 }
 
+/* Enlaces de la barra lateral */
 .sidebar ul li a {
     text-decoration: none;
     color: #fff;
@@ -49,15 +56,18 @@ header {
     transition: background-color 0.3s, transform 0.3s;
 }
 
+/* Efecto hover en los enlaces de la barra lateral */
 .sidebar ul li a:hover {
     background-color: #555;
     transform: translateX(10px);
 }
 
+/* Último elemento de la lista de la barra lateral */
 .sidebar ul li:last-child {
     margin-top: 25em;
 }
 
+/* Estilos para el contenido principal */
 .content {
     flex: 1;
     padding: 20px;
@@ -67,6 +77,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Secciones dentro del contenido principal */
 .content section {
     margin-bottom: 20px;
     padding: 20px;
@@ -76,6 +87,7 @@ header {
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Estilos para el pie de página */
 footer {
     background-color: #333;
     color: #fff;
@@ -83,4 +95,51 @@ footer {
     padding: 10px 0;
     margin-top: auto;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para formularios (de input-style.css y perfiles.css) */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold; /* Agregado desde perfiles.css */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
 }
